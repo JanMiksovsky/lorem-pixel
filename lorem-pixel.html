@@ -5,12 +5,12 @@ Useful for prototyping and early design iterations where you just want FPO (For
 Position Only) artwork.
 -->
 
-<link rel="import" href="quetzal-element.html">
+<link rel="import" href="../polymer/polymer.html">
 
-<polymer-element name="lorem-pixel" attributes="height width">
+<polymer-element name="lorem-pixel" attributes="height width" noscript>
 
 <template>
-  <img id="image" height="{{height}}" width="{{width}}"/>
+  <img id="image" height="{{height}}" width="{{width}}">
 </template>
 
 <script>
@@ -21,7 +21,6 @@ Polymer( "lorem-pixel", {
   },
 
   ready: function() {
-    this.super();
     if ( !this.height && !this.width ) {
       this.height = 300;
       this.width = 400;
